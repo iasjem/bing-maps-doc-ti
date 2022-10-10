@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        font-weight: 700;
+        text-decoration: none;
+        color: #0d6efd;
+    }
+
+    h4 {
+        margin: 0 0 14px 0;
+    }
+
+    main {
+        min-height: calc(100vh - 70px);
+        margin: 0 16px;
+    }
+
+    header {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('./img/doc-bg.jpg');
+        background-position: center;
+        background-size: cover;
+        color: #ffffff;
+    }
+
+    footer {
+        background-color: #888;
+        color: #ffffff;
+    }
+
+    footer {
+        width: 100%;
+        padding: 18px;
+        text-align: center;
+    }
+
+    section {
+        margin: 2rem 0 !important;
+    }
+
+    aside {
+        position: fixed;
+        width: fit-content;
+        right: 16px;
+        top: 16px;
+    }
+
+    ol.doc-chapters li figure {
+        width: 600px;
+        text-align: center;
+        margin: 0 auto 3rem auto;
+    }
+
+    ol.doc-chapters li figure img {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    ol.doc-chapters li figure figcaption {
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    @media screen and (max-width: 767px) {
+        ol.doc-chapters li figure {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        p, td, li, a {
+            font-size: 14px;
+        }
+        ol.doc-chapters {
+            padding: 0 14px;
+        }
+        ol.doc-chapters li figure {
+            width: 100%;
+        }
+        ol.doc-chapters li figure {
+            margin: 0 auto 2rem auto;
+        }
+
+        footer {
+            font-size: 10px;
+        }
+    }
+</style>
+<body>
+    <header class="py-5 text-center">
+        <div class="sub-header">
+            <h1 class="title">
+                Bing Maps API 
+            </h1>
+            <p class="subtitle">
+                TI team initiative for basic research of emerging technologies 2022
+            </p>
+        </div>
+    </header>
+    <main class="container">
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+            <section>
+                <h4 id="list-item-0">Introduction</h4>
+                <p>This is a reference page on how to use Bing Maps API (basic) REST services. The endpoints are only limited to what may be applicable to projects involved with our team. You may reach out to us via Teams for further questions. </p>
+            </section>
+            <section>
+                <h4 id="list-item-1">How to get API key</h4>
+                <ol class="doc-chapters">
+                    <li>
+                        <p>Go to Dev Center and click on My account then My Keys:</p>
+                        <figure>
+                            <img src="./img/bing_API_01.png" />
+                            <figcaption>Going to my keys to generate or retrieve an API key</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>To create a new key, click on the link with “Click here to create a new key”. If you
+                            have an existing key, Click on Show key from the list of application names below:</p>
+                        <figure>
+                            <img src="./img/bing_API_02.png" />
+                            <figcaption>Generate or retrieve an API key</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>From My keys page, fill out all the required (*) fields and click on Create button to
+                            generate a new API key for your specified application:</p>
+                        <figure>
+                            <img src="./img/bing_API_03.png" />
+                            <figcaption>Generate a new API key</figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h4 id="list-item-2">Project Setup</h4>
+                <ol class="doc-chapters">
+                    <li>
+                        <p>Unzip BingMapsAPI_DOC file and import BingMapsAPI
+                            -TechInnov.postman_collection_092722-114200 collection to Postman:</p>
+                        <figure>
+                            <img src="./img/bing_API_11.png" />
+                            <figcaption>How to import collection to Postman</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Create a proxy in Apigee (if not yet existing) and/or upload a new revision:</p>
+                        <figure>
+                            <img src="./img/bing_API_12.png" />
+                            <figcaption>Apigee Proxy: Upload new revision or create new proxy?</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./img/bing_API_13.png" />
+                            <figcaption>Upload new revision of proxy (if existing)</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Deploy current proxy. Once ready, go to Postman collection and click on collection
+                            name. Make sure variable API_BASE_URL is the same with the deployed URL from
+                            Apigee:</p>
+                        <figure>
+                            <img src="./img/bing_API_14.png" />
+                            <figcaption>Check API_BASE_URL key value to match with existing Apigee proxy</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>From Apigee’s proxy Overview page, click on Develop tab then settings.js to change
+                            the API_KEY value. Once Done, save changes and re-deploy:</p>
+                        <figure>
+                            <img src="./img/bing_API_15.png" />
+                            <figcaption>Going to my keys to generate or retrieve an API key</figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h4 id="list-item-3">How to use</h4>
+                <p><b>*</b> Please see provided <a target="_blank" href="https://documenter.getpostman.com/view/20557737/2s83ziPQ6z" alt="documentation for API">Postman Collection</a> to view example responses and read the full documentation for API endpoints applicable for this version.</p>
+                <table class="table table-striped table-responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">REST API</th>
+                            <th scope="col">Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Locations</td>
+                            <td>
+                                <ul>
+                                    <li>Find a location based on an address, point, or query</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Imagery</td>
+                            <td>
+                                <ul>
+                                    <li>Get a static map</li>
+                                    <li>Get a static map that displays a route</li>
+                                    <li>Get imagery metadata</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Routes</td>
+                            <td>
+                                <ul>
+                                    <li>Find a walking, driving or transit route</li>
+                                    <li>Find routes from major routes to a location</li>
+                                    <li>Get traffic information along a route</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Traffic</td>
+                            <td>
+                                <ul>
+                                    <li>Get traffic information for a geographical area</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h4 id="list-item-4">Dynamic Map with Routes (calculate directions)</h4>
+                <p><b>*</b> Please see provided <a href="https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/maps" alt="Example application for dynamic Bing Map" target="_blabk">example</a> to see Bing Maps in action! View the <a href="https://github.com/iasjem/bing-maps-sample" alt="source code for example" target="_blank">source code</a> for reference.</p>
+            </section>
+            <section style="padding-bottom: 48px;">
+                <h4 id="list-item-5">References</h4>
+                <table class="table table-striped table-responsive">
+                    <tbody>
+                        <tr>
+                            <td>Create Apigee Proxy</td>
+                            <td>
+                                <a href="https://cloud.google.com/apigee/docs/api-platform/get-started/create-proxy" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Getting Bing Maps API key</td>
+                            <td>
+                                <a href="https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bing Maps REST Services</td>
+                            <td>
+                                <a href="https://learn.microsoft.com/en-us/bingmaps/rest-services/" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Location and Area Types</td>
+                            <td>
+                                <a href="https://learn.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-area-types" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Getting Started: Creating and Hosting a Map Control</td>
+                            <td>
+                                <a href="https://learn.microsoft.com/en-us/bingmaps/v8-web-control/creating-and-hosting-map-controls/?toc=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fbingmaps%2Fv8-web-control%2Ftoc.json&bc=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2FBingMaps%2Fbreadcrumb%2Ftoc.json" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Calculate Driving Directions</td>
+                            <td>
+                                <a href="https://learn.microsoft.com/en-us/bingmaps/v8-web-control/map-control-concepts/directions-module-examples/calculate-driving-directions" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ISO Country Code List</td>
+                            <td>
+                                <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">
+                                    view
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer>
+        &copy; 2022 Technology and Innovation Team
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
