@@ -1,0 +1,1970 @@
+{
+	"info": {
+		"_postman_id": "13338cc4-0997-41b7-9ffb-ab7e7f42367c",
+		"name": "BingMapsAPI - TechInnov",
+		"description": "Basic usage of REST services for Bing Maps API\n\nTI team initiative for basic research of emerging technologies 2022\n\nDeployed to an Apigee server\n\n**Resource URL:** [https://learn.microsoft.com/en-us/bingmaps/rest-services/getting-started-with-the-bing-maps-rest-services](https://learn.microsoft.com/en-us/bingmaps/rest-services/getting-started-with-the-bing-maps-rest-services)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20557737"
+	},
+	"item": [
+		{
+			"name": "Traffic",
+			"item": [
+				{
+					"name": "/traffic - Get Traffic Incidents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/traffic?mapArea=14.4205907220071,121.006035804749,14.4413298139108,121.027450561523&locationCodes=true&severity=1,2,3,4&type=1,2,3,4,5,6,7,8,9,10,11",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"traffic"
+							],
+							"query": [
+								{
+									"key": "mapArea",
+									"value": "14.4205907220071,121.006035804749,14.4413298139108,121.027450561523",
+									"description": "A bounding box defines an area by specifying SouthLatitude, WestLongitude, NorthLatitude, and EastLongitude values REQUIRED\n\nReference URL: https://docs.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-area-types "
+								},
+								{
+									"key": "locationCodes",
+									"value": "true",
+									"description": "include traffic location codes in the response OPTIONAL\n\nPossible values: true or false"
+								},
+								{
+									"key": "severity",
+									"value": "1,2,3,4",
+									"description": "Specifies severity level of traffic incidents to return. OPTIONAL\n\nSeverity level of traffic incidents - 1: LowImpact, 2: Minor, 3: Moderate, 4: Serious"
+								},
+								{
+									"key": "type",
+									"value": "1,2,3,4,5,6,7,8,9,10,11",
+									"description": "Specifies the type of traffic incidents to return.. OPTIONAL\n\nType of traffic incidents - 1: Accident, 2: Congestion, 3: DisabledVehicle, 4: MassTransit, 5: Miscellaneous, 6: OtherNews, 7: PlannedEvent, 8: RoadHazard, 9: Construction, 10: Alert, 11: Weather"
+								}
+							]
+						},
+						"description": "Information about traffic incidents and issues."
+					},
+					"response": [
+						{
+							"name": "/traffic - Get Traffic Incidents (SUCCESS)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/traffic?mapArea=14.4205907220071,121.006035804749,14.4413298139108,121.027450561523&locationCodes=true&severity=1,2,3,4&type=1,2,3,4,5,6,7,8,9,10,11",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"traffic"
+									],
+									"query": [
+										{
+											"key": "mapArea",
+											"value": "14.4205907220071,121.006035804749,14.4413298139108,121.027450561523",
+											"description": "A bounding box defines an area by specifying SouthLatitude, WestLongitude, NorthLatitude, and EastLongitude values REQUIRED\nReference URL: https://docs.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-area-types "
+										},
+										{
+											"key": "locationCodes",
+											"value": "true",
+											"description": "include traffic location codes in the response OPTIONAL\nPossible values: true or false"
+										},
+										{
+											"key": "severity",
+											"value": "1,2,3,4",
+											"description": "Specifies severity level of traffic incidents to return. OPTIONAL\nSeverity level of traffic incidents - 1: LowImpact, 2: Minor, 3: Moderate, 4: Serious"
+										},
+										{
+											"key": "type",
+											"value": "1,2,3,4,5,6,7,8,9,10,11",
+											"description": "Specifies the type of traffic incidents to return.. OPTIONAL\nType of traffic incidents - 1: Accident, 2: Congestion, 3: DisabledVehicle, 4: MassTransit, 5: Miscellaneous, 6: OtherNews, 7: PlannedEvent, 8: RoadHazard, 9: Construction, 10: Alert, 11: Weather"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:03:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "951"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "9feec14e-023e-48f3-86a8-78b49a652d47"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"1 results found\",\n    \"count\": 1,\n    \"data\": [\n        {\n            \"__type\": \"TrafficIncident:http://schemas.microsoft.com/search/local/ws/rest/v1\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    14.435998,\n                    121.006362\n                ]\n            },\n            \"description\": \"Roadwork on Marcos Alvarez Avenue from Alabang-Zapote Road to Jarn Road.\",\n            \"end\": \"/Date(1664254983614)/\",\n            \"icon\": 3,\n            \"incidentId\": 93635240628013000,\n            \"isEndTimeBackfilled\": true,\n            \"lastModified\": \"/Date(1664247783614)/\",\n            \"roadClosed\": false,\n            \"severity\": 2,\n            \"source\": 5,\n            \"start\": \"/Date(1664205660000)/\",\n            \"title\": \"Marcos Alvarez Avenue\",\n            \"toPoint\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    14.43522,\n                    121.005931\n                ]\n            },\n            \"type\": 9,\n            \"verified\": true\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "StartFragment\n\nUse the Traffic API to get information about traffic incidents and issues, such as construction sites and traffic congestion.\n\nEndFragme\n\n**Reference URL:** [https://learn.microsoft.com/en-us/bingmaps/rest-services/traffic/get-traffic-incidents](https://learn.microsoft.com/en-us/bingmaps/rest-services/traffic/get-traffic-incidents)"
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "/location - Find Location by Query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/location?search=query&q=SM Southmall Laspinas&inclnb=1&limit=10&incl=queryParse",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"location"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "query",
+									"description": "Search mode for API\nrequest REQUIRED"
+								},
+								{
+									"key": "q",
+									"value": "SM Southmall Laspinas",
+									"description": "Search query REQUIRED"
+								},
+								{
+									"key": "inclnb",
+									"value": "1",
+									"description": "include neighborhood info: 1 (true) or 0 (default) OPTIONAL"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "maximum number of locations to return OPTIONAL\n\nA string that contains an integer between 1 and 20. The default value is 5."
+								},
+								{
+									"key": "incl",
+									"value": "queryParse",
+									"description": "Specifies to include additional information in the response.\n\n- queryParse: Specifies that the response shows how the query string was parsed into address values, such as addressLine, locality, adminDistrict, and postalCode.\n- ciso2: Specifies to include the two-letter ISO country code.\n\nIf you specify more than one include value, separate the values with a comma.\n\nPossible values: queryParse, ciso2 OPTIONAL"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/location - Find Location by Query (SUCCESS)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/location?search=query&q=SM Southmall Laspinas&limit=10",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"location"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "query",
+											"description": "Search mode for API\nrequest REQUIRED"
+										},
+										{
+											"key": "q",
+											"value": "SM Southmall Laspinas",
+											"description": "Search query REQUIRED"
+										},
+										{
+											"key": "inclnb",
+											"value": "1",
+											"description": "include neighborhood info: 1 (true) or 0 (default) OPTIONAL",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "maximum number of locations to return OPTIONAL\nA string that contains an integer between 1 and 20. The default value is 5."
+										},
+										{
+											"key": "incl",
+											"value": "queryParse",
+											"description": "Specifies to include additional information in the response.\n- queryParse: Specifies that the response shows how the query string was parsed into address values, such as addressLine, locality, adminDistrict, and postalCode.\n- ciso2: Specifies to include the two-letter ISO country code.\nIf you specify more than one include value, separate the values with a comma.\nPossible values: queryParse, ciso2 OPTIONAL",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:36:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "8855"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "7a891599-ee17-4401-8d6a-45a8decb2291"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"10 results found\",\n    \"count\": 10,\n    \"data\": [\n        {\n            \"_id\": 1,\n            \"bbox\": [\n                14.391233444213867,\n                120.9665298461914,\n                14.486422538757324,\n                121.0241470336914\n            ],\n            \"name\": \"Las Piñas, Philippines\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    14.45991516,\n                    120.99485779\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"National Capital Region\",\n                \"countryRegion\": \"Philippines\",\n                \"formattedAddress\": \"Las Piñas, Philippines\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        14.45991516,\n                        120.99485779\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 2,\n            \"bbox\": [\n                15.343119956668087,\n                120.97103835039107,\n                15.401060722653202,\n                121.0511479289058\n            ],\n            \"name\": \"Las Piñas, Philippines\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    15.37209034,\n                    121.01109314\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Central Luzon\",\n                \"adminDistrict2\": \"Nueva Ecija\",\n                \"countryRegion\": \"Philippines\",\n                \"formattedAddress\": \"Las Piñas, Philippines\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        15.37209034,\n                        121.01109314\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 3,\n            \"bbox\": [\n                -1.5630393250625643,\n                -80.65858985072566,\n                -1.5050985590774504,\n                -80.58130883091496\n            ],\n            \"name\": \"Las Piñas, Ecuador\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -1.53406894,\n                    -80.61994934\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Manabí\",\n                \"adminDistrict2\": \"Jipijapa Canton\",\n                \"countryRegion\": \"Ecuador\",\n                \"formattedAddress\": \"Las Piñas, Ecuador\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        -1.53406894,\n                        -80.61994934\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 4,\n            \"bbox\": [\n                -6.026223324124149,\n                -78.22544505503335,\n                -5.968282558139035,\n                -78.14776966664634\n            ],\n            \"name\": \"Las Piñas, Peru\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -5.99725294,\n                    -78.18660736\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Amazonas\",\n                \"adminDistrict2\": \"Province of Utcubamba\",\n                \"countryRegion\": \"Peru\",\n                \"formattedAddress\": \"Las Piñas, Peru\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        -5.99725294,\n                        -78.18660736\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 5,\n            \"bbox\": [\n                -1.81038143474274,\n                -79.99081657909773,\n                -1.7524406687576262,\n                -79.91352607226946\n            ],\n            \"name\": \"Las Piñas, Ecuador\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -1.78141105,\n                    -79.95217133\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Guayas\",\n                \"adminDistrict2\": \"Santa Lucía Canton\",\n                \"countryRegion\": \"Ecuador\",\n                \"formattedAddress\": \"Las Piñas, Ecuador\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        -1.78141105,\n                        -79.95217133\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 6,\n            \"bbox\": [\n                -1.1207373364608797,\n                -80.93643045576918,\n                -1.0627965704757658,\n                -80.85916280594957\n            ],\n            \"name\": \"Las Piñas, Ecuador\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -1.09176695,\n                    -80.89779663\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Manabí\",\n                \"adminDistrict2\": \"Manta Canton\",\n                \"countryRegion\": \"Ecuador\",\n                \"formattedAddress\": \"Las Piñas, Ecuador\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        -1.09176695,\n                        -80.89779663\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 7,\n            \"bbox\": [\n                9.185169555361934,\n                -70.88137591380993,\n                9.24311032134705,\n                -70.80311810474475\n            ],\n            \"name\": \"Las Piñas, Venezuela\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    9.21413994,\n                    -70.84224701\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"TR\",\n                \"adminDistrict2\": \"Municipio Monte Carmelo\",\n                \"countryRegion\": \"Venezuela\",\n                \"formattedAddress\": \"Las Piñas, Venezuela\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        9.21413994,\n                        -70.84224701\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 8,\n            \"bbox\": [\n                -5.706749580685428,\n                -79.12785070518456,\n                -5.648808814700314,\n                -79.05021936317482\n            ],\n            \"name\": \"Las Piñas, Peru\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -5.6777792,\n                    -79.08903503\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Cajamarca\",\n                \"adminDistrict2\": \"Province of Jaén\",\n                \"countryRegion\": \"Peru\",\n                \"formattedAddress\": \"Las Piñas, Peru\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        -5.6777792,\n                        -79.08903503\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 9,\n            \"bbox\": [\n                -5.132118366543582,\n                -78.8289402858674,\n                -5.0741776005584684,\n                -78.7513819797576\n            ],\n            \"name\": \"Las Piñas, Peru\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -5.10314798,\n                    -78.79016113\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"Cajamarca\",\n                \"adminDistrict2\": \"Province of San Ignacio\",\n                \"countryRegion\": \"Peru\",\n                \"formattedAddress\": \"Las Piñas, Peru\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        -5.10314798,\n                        -78.79016113\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 10,\n            \"bbox\": [\n                9.353390075381466,\n                -70.04593781966973,\n                9.411330841366581,\n                -69.9676425025959\n            ],\n            \"name\": \"Las Piñas, Venezuela\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    9.38236046,\n                    -70.00679016\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"PO\",\n                \"adminDistrict2\": \"Municipio Sucre\",\n                \"countryRegion\": \"Venezuela\",\n                \"formattedAddress\": \"Las Piñas, Venezuela\",\n                \"locality\": \"Las Piñas\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        9.38236046,\n                        -70.00679016\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/location - Find Location by Address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/location?search=address&country=PH&district=National Capital Region&address=Mightie Mart Tunasan&local=Muntinlupa&postal=1773&sm=1&limit=10",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"location"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "address",
+									"description": "Search mode for API\nrequest REQUIRED"
+								},
+								{
+									"key": "country",
+									"value": "PH",
+									"description": "REQUIRED ISO country code: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+								},
+								{
+									"key": "district",
+									"value": "National Capital Region",
+									"description": "subdivision or district OPTIONAL"
+								},
+								{
+									"key": "address",
+									"value": "Mightie Mart Tunasan",
+									"description": "street line of an address OPTIONAL"
+								},
+								{
+									"key": "local",
+									"value": "Muntinlupa",
+									"description": "locality, such as the city or neighborhood, that corresponds to an address OPTIONAL"
+								},
+								{
+									"key": "postal",
+									"value": "1773",
+									"description": "contains the postal or ZIP code OPTIONAL"
+								},
+								{
+									"key": "sm",
+									"value": "1",
+									"description": "strictMatch: Restricts the geocode result to the country or region OPTIONAL - 1, 0"
+								},
+								{
+									"key": "inclnb",
+									"value": "1",
+									"description": "include neighborhood info: 1 (true) or 0 (default) OPTIONAL",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "maximum number of locations to return OPTIONAL\nA string that contains an integer between 1 and 20. The default value is 5."
+								},
+								{
+									"key": "incl",
+									"value": "ciso2",
+									"description": "Specifies to include additional information in the response OPTIONAL\n- ciso2: Specifies to include the two-letter ISO country code.\nIf you specify more than one include value, separate the values with a comma.\nPossible value: ciso2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/location - Find Location by Address (SUCCESS)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/location?search=address&country=PH&district=National Capital Region&address=Mightie Mart Tunasan&local=Muntinlupa&postal=1773&sm=1&limit=10",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"location"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "address",
+											"description": "Search mode for API\nrequest REQUIRED"
+										},
+										{
+											"key": "country",
+											"value": "PH",
+											"description": "REQUIRED ISO country code: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+										},
+										{
+											"key": "district",
+											"value": "National Capital Region",
+											"description": "subdivision or district OPTIONAL"
+										},
+										{
+											"key": "address",
+											"value": "Mightie Mart Tunasan",
+											"description": "street line of an address OPTIONAL"
+										},
+										{
+											"key": "local",
+											"value": "Muntinlupa",
+											"description": "locality, such as the city or neighborhood, that corresponds to an address OPTIONAL"
+										},
+										{
+											"key": "postal",
+											"value": "1773",
+											"description": "contains the postal or ZIP code OPTIONAL"
+										},
+										{
+											"key": "sm",
+											"value": "1",
+											"description": "strictMatch: Restricts the geocode result to the country or region OPTIONAL - 1, 0"
+										},
+										{
+											"key": "inclnb",
+											"value": "1",
+											"description": "include neighborhood info: 1 (true) or 0 (default) OPTIONAL",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "maximum number of locations to return OPTIONAL\nA string that contains an integer between 1 and 20. The default value is 5."
+										},
+										{
+											"key": "incl",
+											"value": "ciso2",
+											"description": "Specifies to include additional information in the response OPTIONAL\n- ciso2: Specifies to include the two-letter ISO country code.\nIf you specify more than one include value, separate the values with a comma.\nPossible value: ciso2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:36:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2788"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "25675694-b949-4430-8b29-ede2b965e087"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"3 results found\",\n    \"count\": 3,\n    \"data\": [\n        {\n            \"_id\": 1,\n            \"bbox\": [\n                14.347721099853516,\n                121.00517272949219,\n                14.38595199584961,\n                121.05744934082031\n            ],\n            \"name\": \"1773, Philippines\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    14.37733173,\n                    121.04187012\n                ]\n            },\n            \"entityType\": \"Postcode1\",\n            \"address\": {\n                \"adminDistrict\": \"National Capital Region\",\n                \"adminDistrict2\": \"Metro Manila\",\n                \"countryRegion\": \"Philippines\",\n                \"formattedAddress\": \"1773, Philippines\",\n                \"locality\": \"Muntinlupa City\",\n                \"postalCode\": \"1773\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        14.37733173,\n                        121.04187012\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 2,\n            \"bbox\": [\n                14.347721099853516,\n                121.00517272949219,\n                14.38595199584961,\n                121.05744934082031\n            ],\n            \"name\": \"Tunasan, Philippines\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    14.36844921,\n                    121.03103638\n                ]\n            },\n            \"entityType\": \"Neighborhood\",\n            \"address\": {\n                \"adminDistrict\": \"National Capital Region\",\n                \"adminDistrict2\": \"Metro Manila\",\n                \"countryRegion\": \"Philippines\",\n                \"formattedAddress\": \"Tunasan, Philippines\",\n                \"locality\": \"Muntinlupa City\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        14.36844921,\n                        121.03103638\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        },\n        {\n            \"_id\": 3,\n            \"bbox\": [\n                31.531299591064453,\n                -96.84452056884766,\n                31.551713943481445,\n                -96.81149291992188\n            ],\n            \"name\": \"Mart, TX\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    31.54639816,\n                    -96.82970428\n                ]\n            },\n            \"entityType\": \"PopulatedPlace\",\n            \"address\": {\n                \"adminDistrict\": \"TX\",\n                \"adminDistrict2\": \"McLennan County\",\n                \"countryRegion\": \"United States\",\n                \"formattedAddress\": \"Mart, TX\",\n                \"locality\": \"Mart\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        31.54639816,\n                        -96.82970428\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/location - Find Location by Point",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/location?search=point&p=14.427127419990574, 121.02418698375386&limit=10",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"location"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "point",
+									"description": "Search mode for API\nrequest REQUIRED"
+								},
+								{
+									"key": "p",
+									"value": "14.427127419990574, 121.02418698375386",
+									"description": "The coordinates of the location for which you want the entities situated at that location. REQUIRED"
+								},
+								{
+									"key": "inclnb",
+									"value": "1",
+									"description": "include neighborhood info: 1 (true) or 0 (default) OPTIONAL",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "maximum number of locations to return OPTIONAL\nA string that contains an integer between 1 and 20. The default value is 5."
+								},
+								{
+									"key": "incl",
+									"value": "ciso2",
+									"description": "Specifies to include additional information in the response OPTIONAL\n\n- ciso2: Specifies to include the two-letter ISO country code.\nIf you specify more than one include value, separate the values with a comma.\n\nPossible value: ciso2",
+									"disabled": true
+								},
+								{
+									"key": "vbpn",
+									"value": "true",
+									"description": "abbreviated or expanded form of names OPTIONAL\n- If false: \"admin1\" & country names will be in their official form (e.g.: “WA” for Washington state in USA and full name, e.g. \"Occitanie\" in France).\n-If true: \"admin1\" names will be in expanded form (e.g. Washington), and \"countryRegion\" field with full name is added to address.",
+									"disabled": true
+								},
+								{
+									"key": "inet",
+									"value": "countryRegion,adminDivision1",
+									"description": "Specifies the entity types returned in the response.  OPTIONAL\nPossible values: includeEntityTypes: businessAndPOI, address, naturalPOI\nReference URL: https://learn.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-recognition-entity-types",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/location - Find Location by Point (SUCCESS)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/location?search=point&p=14.427127419990574, 121.02418698375386&limit=10",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"location"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "point",
+											"description": "Search mode for API\nrequest REQUIRED"
+										},
+										{
+											"key": "p",
+											"value": "14.427127419990574, 121.02418698375386",
+											"description": "The coordinates of the location for which you want the entities situated at that location. REQUIRED"
+										},
+										{
+											"key": "inclnb",
+											"value": "1",
+											"description": "include neighborhood info: 1 (true) or 0 (default) OPTIONAL",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "maximum number of locations to return OPTIONAL\nA string that contains an integer between 1 and 20. The default value is 5."
+										},
+										{
+											"key": "incl",
+											"value": "ciso2",
+											"description": "Specifies to include additional information in the response OPTIONAL\n- ciso2: Specifies to include the two-letter ISO country code.\nIf you specify more than one include value, separate the values with a comma.\nPossible value: ciso2",
+											"disabled": true
+										},
+										{
+											"key": "vbpn",
+											"value": "true",
+											"description": "abbreviated or expanded form of names OPTIONAL\n- If false: \"admin1\" & country names will be in their official form (e.g.: “WA” for Washington state in USA and full name, e.g. \"Occitanie\" in France).\n-If true: \"admin1\" names will be in expanded form (e.g. Washington), and \"countryRegion\" field with full name is added to address.",
+											"disabled": true
+										},
+										{
+											"key": "inet",
+											"value": "countryRegion,adminDivision1",
+											"description": "Specifies the entity types returned in the response.  OPTIONAL\nPossible values: includeEntityTypes: businessAndPOI, address, naturalPOI\nReference URL: https://learn.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-recognition-entity-types",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:37:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1470"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "57e4411e-965f-4345-960a-4fab80e23bd6"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"1 results found\",\n    \"count\": 1,\n    \"data\": [\n        {\n            \"_id\": 1,\n            \"bbox\": [\n                14.422997282429323,\n                121.01885210728351,\n                14.430722717570676,\n                121.02948789271649\n            ],\n            \"name\": \"6786 Alabang-Zapote Road, Cupang, Muntinlupa City, 1820 National Capital Region, Philippines\",\n            \"point\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    14.42686,\n                    121.02417\n                ]\n            },\n            \"entityType\": \"Address\",\n            \"address\": {\n                \"addressLine\": \"6786 Alabang-Zapote Road\",\n                \"adminDistrict\": \"National Capital Region\",\n                \"adminDistrict2\": \"Metro Manila\",\n                \"countryRegion\": \"Philippines\",\n                \"formattedAddress\": \"6786 Alabang-Zapote Road, Cupang, Muntinlupa City, 1820 National Capital Region, Philippines\",\n                \"intersection\": {\n                    \"baseStreet\": \"Alabang-Zapote Road\",\n                    \"secondaryStreet1\": \"Acacia Avenue\",\n                    \"intersectionType\": \"Near\",\n                    \"displayName\": \"Alabang-Zapote Road and Acacia Avenue\"\n                },\n                \"locality\": \"Muntinlupa City\",\n                \"postalCode\": \"1820\"\n            },\n            \"geocodePoints\": [\n                {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        14.42686,\n                        121.02417\n                    ],\n                    \"calculationMethod\": \"Rooftop\",\n                    \"usageTypes\": [\n                        \"Display\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/location - Location Recognition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/location?search=recognition&p=14.427127419990574, 121.02418698375386&vbpn=true&r=.5&t=15&du=km&inet=businessAndPOI",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"location"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "recognition",
+									"description": "Search mode for API\nrequest REQUIRED"
+								},
+								{
+									"key": "p",
+									"value": "14.427127419990574, 121.02418698375386",
+									"description": "The coordinates of the location for which you want the entities situated at that location. REQUIRED"
+								},
+								{
+									"key": "vbpn",
+									"value": "true",
+									"description": "abbreviated or expanded form of names OPTIONAL\n\n- If false: \"admin1\" & country names will be in their official form (e.g.: “WA” for Washington state in USA and full name, e.g. \"Occitanie\" in France).\n\n-If true: \"admin1\" names will be in expanded form (e.g. Washington), and \"countryRegion\" field with full name is added to address."
+								},
+								{
+									"key": "r",
+									"value": ".5",
+									"description": "Search radius in kilometers (KM). OPTIONAL\n\nOnly those entities that fall within this search circle are returned.\n\nDefault search radius is 0.25 KM. The maximum supported radius is 2 KM."
+								},
+								{
+									"key": "t",
+									"value": "15",
+									"description": "The maximum number of entities returned. OPTIONAL\n\nDefault value is 10. The maximum value is 20.\n"
+								},
+								{
+									"key": "du",
+									"value": "km",
+									"description": "Unit for the radius parameter OPTIONAL\n\ndistance unit: kilometer, km, mile, mi"
+								},
+								{
+									"key": "inet",
+									"value": "businessAndPOI",
+									"description": "Specifies the entity types returned in the response.  OPTIONAL\n\nPossible values: includeEntityTypes: businessAndPOI, address, naturalPOI\n\nReference URL: https://learn.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-recognition-entity-types"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/location - Location Recognition (SUCCESS)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/location?search=recognition&p=14.427127419990574, 121.02418698375386&vbpn=true&r=.5&t=15&du=km&inet=businessAndPOI",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"location"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "recognition",
+											"description": "Search mode for API\nrequest REQUIRED"
+										},
+										{
+											"key": "p",
+											"value": "14.427127419990574, 121.02418698375386",
+											"description": "The coordinates of the location for which you want the entities situated at that location. REQUIRED"
+										},
+										{
+											"key": "vbpn",
+											"value": "true",
+											"description": "abbreviated or expanded form of names OPTIONAL\n- If false: \"admin1\" & country names will be in their official form (e.g.: “WA” for Washington state in USA and full name, e.g. \"Occitanie\" in France).\n-If true: \"admin1\" names will be in expanded form (e.g. Washington), and \"countryRegion\" field with full name is added to address."
+										},
+										{
+											"key": "r",
+											"value": ".5",
+											"description": "Search radius in kilometers (KM). OPTIONAL\nOnly those entities that fall within this search circle are returned.\nDefault search radius is 0.25 KM. The maximum supported radius is 2 KM."
+										},
+										{
+											"key": "t",
+											"value": "15",
+											"description": "The maximum number of entities returned. OPTIONAL\nDefault value is 10. The maximum value is 20.\n"
+										},
+										{
+											"key": "du",
+											"value": "km",
+											"description": "Unit for the radius parameter OPTIONAL\ndistance unit: kilometer, km, mile, mi"
+										},
+										{
+											"key": "inet",
+											"value": "businessAndPOI",
+											"description": "Specifies the entity types returned in the response.  OPTIONAL\nPossible values: includeEntityTypes: businessAndPOI, address, naturalPOI\nReference URL: https://learn.microsoft.com/en-us/bingmaps/rest-services/common-parameters-and-types/location-and-recognition-entity-types"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:37:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "10858"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "ae344932-e4fc-473d-9411-9c0d393b1653"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"1 results found\",\n    \"count\": 1,\n    \"data\": [\n        {\n            \"__type\": \"LocationRecog:http://schemas.microsoft.com/search/local/ws/rest/v1\",\n            \"isPrivateResidence\": \"false\",\n            \"businessesAtLocation\": [\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42742,\n                        \"longitude\": 121.02387,\n                        \"addressLine\": \"Alabang-Zapote Road, Real Street, 411 & Acacia Avenue\",\n                        \"locality\": \"Muntinlupa City\",\n                        \"adminDivision\": \"National Capital Region\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1820\",\n                        \"formattedAddress\": \"Alabang-Zapote Road, Real Street, 411 & Acacia Avenue, Muntinlupa City, 1820, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"BrownBag\",\n                        \"url\": \"http://www.brownbag.ph/contactus.php\",\n                        \"type\": \"Information Technology Companies\",\n                        \"otherTypes\": [\n                            \"Business-to-Business\",\n                            \"B2B Business Services\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.4268598556519,\n                        \"longitude\": 121.024169921875,\n                        \"addressLine\": \"6786 Alabang-Zapote Road\",\n                        \"locality\": \"Muntinlupa City\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1771\",\n                        \"formattedAddress\": \"6786 Alabang-Zapote Road, Muntinlupa City, 1771, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Ayala Life Building\",\n                        \"type\": \"BusinessStructure\"\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42709,\n                        \"longitude\": 121.02388,\n                        \"addressLine\": \"38 1771 Filipinas Ave, Cupang, Muntinlupa, Metro Manila, Philippines\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"38 1771 Filipinas Ave, Cupang, Muntinlupa, Metro Manila, Philippines, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Kanto Food Stop\"\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42743,\n                        \"longitude\": 121.023985,\n                        \"addressLine\": \"Bldg. 1215 Acacia Avenue Madrigal Business Park Ayala Alabang\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1770\",\n                        \"formattedAddress\": \"Bldg. 1215 Acacia Avenue Madrigal Business Park Ayala Alabang, Muntinlupa, 1770, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Jrpowers Construction\",\n                        \"phone\": \"(02) 8551 8961\",\n                        \"type\": \"Real Estate\",\n                        \"otherTypes\": [\n                            \"Builders\",\n                            \"Construction Services\",\n                            \"Professionals and Services\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42743,\n                        \"longitude\": 121.023985,\n                        \"addressLine\": \"840 Acacia Avenue, Ayala Alabang\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1770\",\n                        \"formattedAddress\": \"840 Acacia Avenue, Ayala Alabang, Muntinlupa, 1770, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Iconstruct Build & Realty\",\n                        \"phone\": \"(02) 8659 0315\",\n                        \"type\": \"Business-to-Business\",\n                        \"otherTypes\": [\n                            \"B2B Manufacturing and Supplies\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427254,\n                        \"longitude\": 121.02382,\n                        \"addressLine\": \"416 Acacia Avenue, Ayala Alabang Village\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1770\",\n                        \"formattedAddress\": \"416 Acacia Avenue, Ayala Alabang Village, Muntinlupa, 1770, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Ayil Capital Venture Holdings\",\n                        \"phone\": \"(02) 8810 4992\",\n                        \"type\": \"Holding Companies\",\n                        \"otherTypes\": [\n                            \"Banking and Finance\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427254,\n                        \"longitude\": 121.02382,\n                        \"addressLine\": \"124 Acacia Avenue, Ayala Alabang\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1780\",\n                        \"formattedAddress\": \"124 Acacia Avenue, Ayala Alabang, Muntinlupa, 1780, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"The Tinder Box\",\n                        \"phone\": \"(02) 8850 8616\",\n                        \"type\": \"Cigar and Tobacco Shops\",\n                        \"otherTypes\": [\n                            \"Business-to-Business\",\n                            \"Real Estate\",\n                            \"Retail\",\n                            \"Shop\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42742,\n                        \"longitude\": 121.02387,\n                        \"addressLine\": \"Pou Center Alabang-Zapoted Road Corner Acacia Avenue, Madrigal Business Park, Alabang\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"postalCode\": \"1770\",\n                        \"formattedAddress\": \"Pou Center Alabang-Zapoted Road Corner Acacia Avenue, Madrigal Business Park, Alabang, Muntinlupa, 1770, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"AHS INTERNATIONAL CORPORATION\",\n                        \"phone\": \"0918 922 4895\",\n                        \"type\": \"B2B Business Services\",\n                        \"otherTypes\": [\n                            \"Business-to-Business\",\n                            \"Consultants and General Services\",\n                            \"Business Management Services\",\n                            \"Business Consultants\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427254,\n                        \"longitude\": 121.02382,\n                        \"addressLine\": \"416 Acacia Ave Ayala Alabang Village\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"416 Acacia Ave Ayala Alabang Village, Muntinlupa, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Kumara Capital Holdings\",\n                        \"type\": \"Holding Companies\",\n                        \"otherTypes\": [\n                            \"Banking and Finance\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427254,\n                        \"longitude\": 121.02382,\n                        \"addressLine\": \"416 Acacia Ave Ayala Alabang Village\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"416 Acacia Ave Ayala Alabang Village, Muntinlupa, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Ainos Capital Holdings\",\n                        \"type\": \"Holding Companies\",\n                        \"otherTypes\": [\n                            \"Banking and Finance\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427455,\n                        \"longitude\": 121.023879,\n                        \"addressLine\": \"U702 & 704 Acacia Ave Madrigal Ayala Alabang\",\n                        \"locality\": \"Muntinlupa\",\n                        \"adminDivision\": \"Metro Manila\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"U702 & 704 Acacia Ave Madrigal Ayala Alabang, Muntinlupa, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Mecamidi Phils\",\n                        \"type\": \"B2B Business Services\",\n                        \"otherTypes\": [\n                            \"Business-to-Business\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427717,\n                        \"longitude\": 121.024004,\n                        \"addressLine\": \"ACACIA AVENUE, 1780\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"ACACIA AVENUE, 1780, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Alabang Country Club\",\n                        \"url\": \"https://delivery.yellowcabpizza.com/\",\n                        \"phone\": \"(02) 8842 3531\",\n                        \"type\": \"Arts and Entertainment\"\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.427724,\n                        \"longitude\": 121.023957,\n                        \"addressLine\": \"Estrellita Center, Alabang–Zapote Rd, Cupang, Muntinlupa, 1771 Metro Manila, Philippines\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"Estrellita Center, Alabang–Zapote Rd, Cupang, Muntinlupa, 1771 Metro Manila, Philippines, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Fiesta Gas\",\n                        \"url\": \"https://mb.com.ph/\",\n                        \"type\": \"Natural Gas Companies\",\n                        \"otherTypes\": [\n                            \"Professionals and Services\",\n                            \"Home and Garden Services\",\n                            \"Utilities\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42742,\n                        \"longitude\": 121.02387,\n                        \"addressLine\": \"Unit 603 Ayala Life FGU Center Alabang Zapote Road corner Acacia Avenue Madrigal Business Park Ayala Alabang, Muntinlupa City 1770, Metro Manila, Philippines\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"Unit 603 Ayala Life FGU Center Alabang Zapote Road corner Acacia Avenue Madrigal Business Park Ayala Alabang, Muntinlupa City 1770, Metro Manila, Philippines, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Intas Destination Management Inc.\",\n                        \"type\": \"Sightseeing Tours\",\n                        \"otherTypes\": [\n                            \"Travel\",\n                            \"SeeDo\"\n                        ]\n                    }\n                },\n                {\n                    \"businessAddress\": {\n                        \"latitude\": 14.42742,\n                        \"longitude\": 121.02387,\n                        \"addressLine\": \"14th Floor, Ayala Life-FGU Building, Alabang-Zapote Road, corner Acacia Avenue, Madrigal Business Park, Alabang, Muntinlupa City, 1707 Metro Manila, Philippines\",\n                        \"countryIso2\": \"PH\",\n                        \"formattedAddress\": \"14th Floor, Ayala Life-FGU Building, Alabang-Zapote Road, corner Acacia Avenue, Madrigal Business Park, Alabang, Muntinlupa City, 1707 Metro Manila, Philippines, PH\"\n                    },\n                    \"businessInfo\": {\n                        \"entityName\": \"Helius Corporation\",\n                        \"type\": \"Business Consultants\",\n                        \"otherTypes\": [\n                            \"Business-to-Business\",\n                            \"B2B Business Services\",\n                            \"Consultants and General Services\"\n                        ]\n                    }\n                }\n            ],\n            \"naturalPOIAtLocation\": [],\n            \"addressOfLocation\": []\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "StartFragment\n\nUse the Locations API to get location information.\n\nEndFragment\n\n  \n**Reference URL:** [https://learn.microsoft.com/en-us/bingmaps/rest-services/locations/](https://learn.microsoft.com/en-us/bingmaps/rest-services/locations/)"
+		},
+		{
+			"name": "Routes",
+			"item": [
+				{
+					"name": "/routes - Calculate by Routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/routes?key=routes&travelMode=walking&optmz=time&waypoints=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B&ig=true&avoid=highways,tolls&du=mi",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"routes"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "routes",
+									"description": "Key mode for API request REQUIRED"
+								},
+								{
+									"key": "travelMode",
+									"value": "walking",
+									"description": "The mode of travel for the\nroute OPTIONAL\n\nPossible Values:\ndriving (default), walking, transit"
+								},
+								{
+									"key": "optmz",
+									"value": "time",
+									"description": "Specifies what parameters\nto use to optimize the route OPTIONAL\n\nPossible values:\ntime (default), distance, timeWithTraffic, timeAvoidClosure"
+								},
+								{
+									"key": "waypoints",
+									"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+									"description": "Specifies two or more locations that define the route and that are in sequential order. You can have a maximum of 25 waypoints. REQUIRED \nExamples:\n- waypoint.1=47.610,-122.107 [Point]\n- wp.1=Seattle,WA [landmark]\n- wp.1=Seattle,WA;66;SEA [icon and label]\n- waypoint.1=1%20Microsoft%20Way%20Redmond,%20WA [address]"
+								},
+								{
+									"key": "ig",
+									"value": "true",
+									"description": "Specifies whether the response include information about itinerary groups (continuous itinerary items in same mode are usually grouped together). OPTIONAL\nPossible values: true or false"
+								},
+								{
+									"key": "avoid",
+									"value": "highways,tolls",
+									"description": "Specifies the road types to minimize or avoid when a route is created for the driving travel mode. OPTIONAL\nIf no values are specified, highways and tolls are allowed in the route.\n- highways: Avoids the use of highways in the route.\n- tolls: Avoids the use of toll roads in the route.\n- ferry: Avoids the use of ferries in the route.\n- minimizeHighways: Minimizes (tries to avoid) the use of highways in the route.\n- minimizeTolls: Minimizes (tries to avoid) the use of toll roads in the route. Note: If you specify more than one option for a road type, then the most restrictive option is used. For example, if you set the avoid parameter to both highways and minimizeHighways, the highways option is used and all highways are avoided.\n- borderCrossing: Avoids crossing country borders in the route.\nExamples:\navoid=highways\navoid=highways,tolls\navoid=borderCrossing"
+								},
+								{
+									"key": "du",
+									"value": "mi",
+									"description": "The units to use for distances in the response. OPTIONAL:\n• mile or mi\n• kilometer or km [default]"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/routes - Calculate by Routes (SUCCESS - walking)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/routes?key=routes&travelMode=walking&optmz=distance&waypoints=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"routes"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "routes",
+											"description": "Key mode for API request REQUIRED"
+										},
+										{
+											"key": "travelMode",
+											"value": "walking",
+											"description": "The mode of travel for the\nroute OPTIONAL\nPossible Values:\ndriving (default), walking, transit"
+										},
+										{
+											"key": "optmz",
+											"value": "distance",
+											"description": "Specifies what parameters\nto use to optimize the route OPTIONAL\nPossible values:\ntime (default), distance, timeWithTraffic, timeAvoidClosure"
+										},
+										{
+											"key": "waypoints",
+											"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+											"description": "Specifies two or more locations that define the route and that are in sequential order. You can have a maximum of 25 waypoints. REQUIRED \nExamples:\n- waypoint.1=47.610,-122.107 [Point]\n- wp.1=Seattle,WA [landmark]\n- wp.1=Seattle,WA;66;SEA [icon and label]\n- waypoint.1=1%20Microsoft%20Way%20Redmond,%20WA [address]"
+										},
+										{
+											"key": "ig",
+											"value": "true",
+											"description": "Specifies whether the response include information about itinerary groups (continuous itinerary items in same mode are usually grouped together). OPTIONAL\n\nPossible values: true or false",
+											"disabled": true
+										},
+										{
+											"key": "avoid",
+											"value": "highways,tolls",
+											"description": "Specifies the road types to minimize or avoid when a route is created for the driving travel mode. OPTIONAL\n\nIf no values are specified, highways and tolls are allowed in the route.\n\n- highways: Avoids the use of highways in the route.\n- tolls: Avoids the use of toll roads in the route.\n- ferry: Avoids the use of ferries in the route.\n- minimizeHighways: Minimizes (tries to avoid) the use of highways in the route.\n- minimizeTolls: Minimizes (tries to avoid) the use of toll roads in the route. Note: If you specify more than one option for a road type, then the most restrictive option is used. For example, if you set the avoid parameter to both highways and minimizeHighways, the highways option is used and all highways are avoided.\n- borderCrossing: Avoids crossing country borders in the route.\n\nExamples:\n\navoid=highways\n\navoid=highways,tolls\n\navoid=borderCrossing",
+											"disabled": true
+										},
+										{
+											"key": "du",
+											"value": "mi",
+											"description": "The units to use for distances in the response. OPTIONAL:\n• mile or mi\n• kilometer or km [default]",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:28:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9658"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "d2b4ae1a-f2c3-4171-9891-d24621fd54a6"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"1 results found\",\n    \"count\": 1,\n    \"data\": [\n        {\n            \"_id\": 1,\n            \"bbox\": [\n                14.426998,\n                121.010553,\n                14.435166,\n                121.024191\n            ],\n            \"travelMode\": \"Walking\",\n            \"trafficCongestion\": \"None\",\n            \"trafficDataUsed\": \"None\",\n            \"distance\": \"1.869 Kilometers\",\n            \"duration\": \"1346 Seconds\",\n            \"trafficDuration\": \"1346 Seconds\",\n            \"routes\": [\n                {\n                    \"actualEnd\": {\n                        \"type\": \"Point\",\n                        \"coordinates\": [\n                            14.427193,\n                            121.024191\n                        ]\n                    },\n                    \"actualStart\": {\n                        \"type\": \"Point\",\n                        \"coordinates\": [\n                            14.435166,\n                            121.010671\n                        ]\n                    },\n                    \"alternateVias\": [],\n                    \"description\": \"411\",\n                    \"endTime\": \"/Date(1664304647038-0700)/\",\n                    \"itineraryItems\": [\n                        {\n                            \"compassDirection\": \"south\",\n                            \"details\": [\n                                {\n                                    \"compassDegrees\": 201,\n                                    \"endPathIndices\": [\n                                        3\n                                    ],\n                                    \"maneuverType\": \"DepartStart\",\n                                    \"mode\": \"Walking\",\n                                    \"roadType\": \"Street\",\n                                    \"startPathIndices\": [\n                                        0\n                                    ]\n                                }\n                            ],\n                            \"exit\": \"\",\n                            \"iconType\": \"Walk\",\n                            \"instruction\": {\n                                \"formattedText\": null,\n                                \"maneuverType\": \"DepartStart\",\n                                \"text\": \"Head south on road toward 411 / Alabang-Zapote Road\"\n                            },\n                            \"isRealTimeTransit\": false,\n                            \"maneuverPoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.435166,\n                                    121.010671\n                                ]\n                            },\n                            \"realTimeTransitDelay\": 0,\n                            \"sideOfStreet\": \"Unknown\",\n                            \"tollZone\": \"\",\n                            \"towardsRoadName\": \"411 / Alabang-Zapote Road\",\n                            \"transitTerminus\": \"\",\n                            \"travelDistance\": 0.035,\n                            \"travelDuration\": 25,\n                            \"travelMode\": \"Walking\"\n                        },\n                        {\n                            \"compassDirection\": \"southeast\",\n                            \"details\": [\n                                {\n                                    \"compassDegrees\": 117,\n                                    \"endPathIndices\": [\n                                        10\n                                    ],\n                                    \"maneuverType\": \"TurnLeft\",\n                                    \"mode\": \"Walking\",\n                                    \"names\": [\n                                        \"Alabang-Zapote Road\"\n                                    ],\n                                    \"roadShieldRequestParameters\": {\n                                        \"bucket\": 721550,\n                                        \"shields\": [\n                                            {\n                                                \"labels\": [\n                                                    \"411\"\n                                                ],\n                                                \"roadShieldType\": 3\n                                            }\n                                        ]\n                                    },\n                                    \"roadType\": \"Highway\",\n                                    \"startPathIndices\": [\n                                        3\n                                    ]\n                                }\n                            ],\n                            \"exit\": \"\",\n                            \"iconType\": \"Walk\",\n                            \"instruction\": {\n                                \"formattedText\": null,\n                                \"maneuverType\": \"TurnLeft\",\n                                \"text\": \"Turn left onto 411 / Alabang-Zapote Road\"\n                            },\n                            \"isRealTimeTransit\": false,\n                            \"maneuverPoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.434867,\n                                    121.010553\n                                ]\n                            },\n                            \"realTimeTransitDelay\": 0,\n                            \"sideOfStreet\": \"Unknown\",\n                            \"tollZone\": \"\",\n                            \"transitTerminus\": \"\",\n                            \"travelDistance\": 1.731,\n                            \"travelDuration\": 1246,\n                            \"travelMode\": \"Walking\"\n                        },\n                        {\n                            \"compassDirection\": \"east\",\n                            \"details\": [\n                                {\n                                    \"compassDegrees\": 102,\n                                    \"endPathIndices\": [\n                                        13\n                                    ],\n                                    \"maneuverType\": \"TurnRight\",\n                                    \"mode\": \"Walking\",\n                                    \"names\": [\n                                        \"Acacia Avenue\"\n                                    ],\n                                    \"roadShieldRequestParameters\": {\n                                        \"bucket\": 721555,\n                                        \"shields\": [\n                                            {\n                                                \"labels\": [\n                                                    \"411\"\n                                                ],\n                                                \"roadShieldType\": 3\n                                            }\n                                        ]\n                                    },\n                                    \"roadType\": \"Highway\",\n                                    \"startPathIndices\": [\n                                        10\n                                    ]\n                                }\n                            ],\n                            \"exit\": \"\",\n                            \"iconType\": \"Walk\",\n                            \"instruction\": {\n                                \"formattedText\": null,\n                                \"maneuverType\": \"TurnRight\",\n                                \"text\": \"Turn right onto Acacia Avenue\"\n                            },\n                            \"isRealTimeTransit\": false,\n                            \"maneuverPoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.427421,\n                                    121.023869\n                                ]\n                            },\n                            \"realTimeTransitDelay\": 0,\n                            \"sideOfStreet\": \"Unknown\",\n                            \"tollZone\": \"\",\n                            \"transitTerminus\": \"\",\n                            \"travelDistance\": 0.058,\n                            \"travelDuration\": 41,\n                            \"travelMode\": \"Walking\"\n                        },\n                        {\n                            \"compassDirection\": \"northeast\",\n                            \"details\": [\n                                {\n                                    \"compassDegrees\": 33,\n                                    \"endPathIndices\": [\n                                        15\n                                    ],\n                                    \"maneuverType\": \"TurnBack\",\n                                    \"mode\": \"Walking\",\n                                    \"roadType\": \"Street\",\n                                    \"startPathIndices\": [\n                                        13\n                                    ]\n                                }\n                            ],\n                            \"exit\": \"\",\n                            \"iconType\": \"Walk\",\n                            \"instruction\": {\n                                \"formattedText\": null,\n                                \"maneuverType\": \"TurnBack\",\n                                \"text\": \"Turn back on road\"\n                            },\n                            \"isRealTimeTransit\": false,\n                            \"maneuverPoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.426998,\n                                    121.023848\n                                ]\n                            },\n                            \"realTimeTransitDelay\": 0,\n                            \"sideOfStreet\": \"Unknown\",\n                            \"tollZone\": \"\",\n                            \"transitTerminus\": \"\",\n                            \"travelDistance\": 0.045,\n                            \"travelDuration\": 32,\n                            \"travelMode\": \"Walking\"\n                        },\n                        {\n                            \"compassDirection\": \"northeast\",\n                            \"details\": [\n                                {\n                                    \"compassDegrees\": 33,\n                                    \"endPathIndices\": [\n                                        15\n                                    ],\n                                    \"maneuverType\": \"ArriveFinish\",\n                                    \"mode\": \"Walking\",\n                                    \"roadType\": \"Street\",\n                                    \"startPathIndices\": [\n                                        15\n                                    ]\n                                }\n                            ],\n                            \"exit\": \"\",\n                            \"hints\": [\n                                {\n                                    \"hintType\": \"PreviousIntersection\",\n                                    \"text\": \"The last intersection before your destination is Acacia Avenue\"\n                                },\n                                {\n                                    \"hintType\": \"NextIntersection\",\n                                    \"text\": \"If you reach 411 / Alabang-Zapote Road, you've gone too far\"\n                                }\n                            ],\n                            \"iconType\": \"Walk\",\n                            \"instruction\": {\n                                \"formattedText\": null,\n                                \"maneuverType\": \"ArriveFinish\",\n                                \"text\": \"Arrive at road\"\n                            },\n                            \"isRealTimeTransit\": false,\n                            \"maneuverPoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.427193,\n                                    121.024191\n                                ]\n                            },\n                            \"realTimeTransitDelay\": 0,\n                            \"sideOfStreet\": \"Unknown\",\n                            \"tollZone\": \"\",\n                            \"transitTerminus\": \"\",\n                            \"travelDistance\": 0,\n                            \"travelDuration\": 0,\n                            \"travelMode\": \"Walking\"\n                        }\n                    ],\n                    \"routeRegion\": \"WWMX\",\n                    \"routeSubLegs\": [\n                        {\n                            \"endWaypoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.427193,\n                                    121.024191\n                                ],\n                                \"description\": \"road\",\n                                \"isVia\": false,\n                                \"locationIdentifier\": \"0|40|70|246|167|81|10|203|194|0|0|224|1|37|223|129|62|0|14.427193,121.024191\",\n                                \"routePathIndex\": 15\n                            },\n                            \"startWaypoint\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    14.435166,\n                                    121.010671\n                                ],\n                                \"description\": \"road\",\n                                \"isVia\": false,\n                                \"locationIdentifier\": \"0|40|70|246|167|49|151|202|194|0|0|224|1|231|90|68|63|0|14.435166,121.010671\",\n                                \"routePathIndex\": 0\n                            },\n                            \"travelDistance\": 1.869,\n                            \"travelDuration\": 1346\n                        }\n                    ],\n                    \"startTime\": \"/Date(1664303301038-0700)/\",\n                    \"travelDistance\": 1.869,\n                    \"travelDuration\": 1346,\n                    \"travelMode\": \"Walking\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/routes - Calculate by Distance Matrix",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BASE_URL}}/routes?key=distance_matrix&travelMode=driving&orig=14.435198230128893, 121.01059062256266&dest=14.427127419990574, 121.02418698375386",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"routes"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "distance_matrix",
+									"description": "Key mode for API request REQUIRED"
+								},
+								{
+									"key": "travelMode",
+									"value": "driving",
+									"description": "The mode of travel for the\nroute OPTIONAL\nPossible Values:\ndriving (default), walking, transit"
+								},
+								{
+									"key": "orig",
+									"value": "14.435198230128893, 121.01059062256266",
+									"description": "Origin points coordinates (separate by | for each coordinates) REQUIRED"
+								},
+								{
+									"key": "dest",
+									"value": "14.427127419990574, 121.02418698375386",
+									"description": "Destination\npoints coordinates (separate by | for each coordinates) REQUIRED"
+								},
+								{
+									"key": "du",
+									"value": "mi",
+									"description": "The units to use for distances in the response. OPTIONAL:\n• mile or mi\n• kilometer or km [default]",
+									"disabled": true
+								},
+								{
+									"key": "tu",
+									"value": "second",
+									"description": "The units to use for time durations in the response. OPTIONAL:\n• minute [default]\n• second",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/routes - Calculate by Distance Matrix (SUCCESS - driving)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/routes?key=distance_matrix&travelMode=driving&orig=14.435198230128893, 121.01059062256266&dest=14.427127419990574, 121.02418698375386",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"routes"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "distance_matrix",
+											"description": "Key mode for API request REQUIRED"
+										},
+										{
+											"key": "travelMode",
+											"value": "driving",
+											"description": "The mode of travel for the\nroute OPTIONAL\nPossible Values:\ndriving (default), walking, transit"
+										},
+										{
+											"key": "orig",
+											"value": "14.435198230128893, 121.01059062256266",
+											"description": "Origin points coordinates (separate by | for each coordinates) REQUIRED"
+										},
+										{
+											"key": "dest",
+											"value": "14.427127419990574, 121.02418698375386",
+											"description": "Destination\npoints coordinates (separate by | for each coordinates) REQUIRED"
+										},
+										{
+											"key": "du",
+											"value": "mi",
+											"description": "The units to use for distances in the response. OPTIONAL:\n\n• mile or mi\n• kilometer or km [default]",
+											"disabled": true
+										},
+										{
+											"key": "tu",
+											"value": "second",
+											"description": "The units to use for time durations in the response. OPTIONAL:\n\n• minute [default]\n• second",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:27:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "714"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "146705f2-a3f4-4524-b1fe-b961313601d8"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Search Successful!\",\n    \"message\": \"1 results found\",\n    \"count\": 1,\n    \"data\": [\n        {\n            \"__type\": \"DistanceMatrix:http://schemas.microsoft.com/search/local/ws/rest/v1\",\n            \"destinations\": [\n                {\n                    \"latitude\": 14.427127419990574,\n                    \"longitude\": 121.02418698375386\n                }\n            ],\n            \"origins\": [\n                {\n                    \"latitude\": 14.435198230128893,\n                    \"longitude\": 121.01059062256266\n                }\n            ],\n            \"results\": [\n                {\n                    \"destinationIndex\": 0,\n                    \"originIndex\": 0,\n                    \"totalWalkDuration\": 0,\n                    \"travelDistance\": 2.304,\n                    \"travelDuration\": 7.1333\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "StartFragment\n\nUse the Routes API to create a route that includes two or more locations and to create routes from major roads. You can create driving or walking routes.\n\nEndFragment\n\n**Reference URL:** [https://learn.microsoft.com/en-us/bingmaps/rest-services/routes/](https://learn.microsoft.com/en-us/bingmaps/rest-services/routes/)"
+		},
+		{
+			"name": "Imagery",
+			"item": [
+				{
+					"name": "/imagery - Get Road Map",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "image/jpeg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{API_BASE_URL}}/imagery?key=road_map&pp=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B&mapSize=500,500&mapLayer=Basemap,Buildings&zoomLevel=14&metadata=1&declutter=1",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"imagery"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "road_map",
+									"description": "Key mode for\nAPI request"
+								},
+								{
+									"key": "pp",
+									"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+									"description": "Push Pins - Create push pins to pin point locations on a map image. Format: <lat><long>;;<pin label> REQUIRED"
+								},
+								{
+									"key": "mapSize",
+									"value": "500,500",
+									"description": "Map image size. Format: <width>,<height>"
+								},
+								{
+									"key": "mapLayer",
+									"value": "Basemap,Buildings",
+									"description": "A display layer that renders on top of the imagery set. Possible values: Basemap,Buildings, OrdnanceSurvey, TrafficFlow. OPTIONAL"
+								},
+								{
+									"key": "zoomLevel",
+									"value": "14",
+									"description": "The level of zoom to display. An integer between 0 and 20. OPTIONAL"
+								},
+								{
+									"key": "metadata",
+									"value": "1",
+									"description": "Specifies whether to return metadata for the static map instead of the image."
+								},
+								{
+									"key": "declutter",
+									"value": "1",
+									"description": "Specifies whether to change the display of overlapping pushpins so that they display separately on a map. OPTIONAL\n"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/imagery - Get Road Map (SUCCESS with metadata)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "image/jpeg",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/imagery?key=road_map&pp=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B&mapSize=500,500&mapLayer=Basemap,Buildings&zoomLevel=14&metadata=1&declutter=1",
+									"protocol": "https",
+									"host": [
+										"techinnovationresearch-eval-test",
+										"apigee",
+										"net"
+									],
+									"path": [
+										"bing-maps-api",
+										"imagery"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "road_map",
+											"description": "Key mode for\nAPI request REQUIRED"
+										},
+										{
+											"key": "pp",
+											"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+											"description": "Push Pins - Create push pins to pin point locations on a map image. Format: <lat><long>;;<pin label> REQUIRED"
+										},
+										{
+											"key": "mapSize",
+											"value": "500,500",
+											"description": "Map image size. Format: <width>,<height>"
+										},
+										{
+											"key": "mapLayer",
+											"value": "Basemap,Buildings",
+											"description": "A display layer that renders on top of the imagery set. Possible values: Basemap,Buildings, OrdnanceSurvey, TrafficFlow. OPTIONAL"
+										},
+										{
+											"key": "zoomLevel",
+											"value": "14",
+											"description": "The level of zoom to display. An integer between 0 and 20. OPTIONAL"
+										},
+										{
+											"key": "metadata",
+											"value": "1",
+											"description": "Specifies whether to return metadata for the static map instead of the image."
+										},
+										{
+											"key": "declutter",
+											"value": "1",
+											"description": "Specifies whether to change the display of overlapping pushpins so that they display separately on a map. OPTIONAL\n"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:06:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1738"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "8d59db62-5f84-4a67-ab00-11d2e36e7772"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Map Generated Successfulyl\",\n    \"data\": {\n        \"map_image_url\": null,\n        \"metadata\": {\n            \"estimatedTotal\": 1,\n            \"resources\": [\n                {\n                    \"__type\": \"StaticMapMetadata:http://schemas.microsoft.com/search/local/ws/rest/v1\",\n                    \"bbox\": [\n                        14.4144808417335,\n                        120.989170074463,\n                        14.455958231194,\n                        121.031999588013\n                    ],\n                    \"imageHeight\": \"500\",\n                    \"imageWidth\": \"500\",\n                    \"mapCenter\": {\n                        \"coordinates\": [\n                            \"14.4351982301289\",\n                            \"121.010590622563\"\n                        ]\n                    },\n                    \"pushpins\": [\n                        {\n                            \"anchor\": {\n                                \"x\": \"250\",\n                                \"y\": \"250\"\n                            },\n                            \"bottomRightOffset\": {\n                                \"x\": \"8\",\n                                \"y\": \"8\"\n                            },\n                            \"point\": {\n                                \"coordinates\": [\n                                    \"14.4351982301289\",\n                                    \"121.010590622563\"\n                                ]\n                            },\n                            \"topLeftOffset\": {\n                                \"x\": \"7\",\n                                \"y\": \"7\"\n                            }\n                        },\n                        {\n                            \"anchor\": {\n                                \"x\": \"408\",\n                                \"y\": \"347\"\n                            },\n                            \"bottomRightOffset\": {\n                                \"x\": \"8\",\n                                \"y\": \"8\"\n                            },\n                            \"point\": {\n                                \"coordinates\": [\n                                    \"14.4271274199906\",\n                                    \"121.024186983754\"\n                                ]\n                            },\n                            \"topLeftOffset\": {\n                                \"x\": \"7\",\n                                \"y\": \"7\"\n                            }\n                        }\n                    ],\n                    \"zoom\": \"14\"\n                }\n            ]\n        }\n    }\n}"
+						},
+						{
+							"name": "/imagery - Get Road Map (SUCCESS - image only)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "image/jpeg",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{API_BASE_URL}}/imagery?key=road_map&pp=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B&mapSize=500,500&mapLayer=Basemap,Buildings&zoomLevel=14&declutter=1",
+									"host": [
+										"{{API_BASE_URL}}"
+									],
+									"path": [
+										"imagery"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "road_map",
+											"description": "Key mode for\nAPI request REQUIRED"
+										},
+										{
+											"key": "pp",
+											"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+											"description": "Push Pins - Create push pins to pin point locations on a map image. Format: <lat><long>;;<pin label> REQUIRED"
+										},
+										{
+											"key": "mapSize",
+											"value": "500,500",
+											"description": "Map image size. Format: <width>,<height>"
+										},
+										{
+											"key": "mapLayer",
+											"value": "Basemap,Buildings",
+											"description": "A display layer that renders on top of the imagery set. Possible values: Basemap,Buildings, OrdnanceSurvey, TrafficFlow. OPTIONAL"
+										},
+										{
+											"key": "zoomLevel",
+											"value": "14",
+											"description": "The level of zoom to display. An integer between 0 and 20. OPTIONAL"
+										},
+										{
+											"key": "metadata",
+											"value": "1",
+											"description": "Specifies whether to return metadata for the static map instead of the image.",
+											"disabled": true
+										},
+										{
+											"key": "declutter",
+											"value": "1",
+											"description": "Specifies whether to change the display of overlapping pushpins so that they display separately on a map. OPTIONAL\n"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:07:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "d6327751-2dba-4bae-b184-0b8ba7481bde"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Map Generated Successfulyl\",\n    \"data\": {\n        \"map_image_url\": \"https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/14.435198230128893,121.01059062256266;;A/14?key=AtHE9bgbozoYqBc4UaubjFAw9L16qnnD4-B4UgDGoGu3K2HXBUq_YffNmxAXuaQ9&pp=14.435198230128893,121.01059062256266;;A&pp=14.427127419990574,121.02418698375386;;B&mapSize=500,500&mapLayer=Basemap,Buildings&dcl=1\",\n        \"metadata\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/imagery - Get Route Map",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "image/jpeg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{API_BASE_URL}}/imagery?key=route_map&mapSize=1080,780&mapLayer=Basemap,Buildings&declutter=1&waypoints=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B|14.427127419990574, 121.02418698375386;;C",
+							"host": [
+								"{{API_BASE_URL}}"
+							],
+							"path": [
+								"imagery"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "route_map",
+									"description": "Key mode for\nAPI request REQUIRED"
+								},
+								{
+									"key": "pp",
+									"value": "14.435198230128893, 121.01059062256266",
+									"description": "Push Pins - Create push pin to pin point locations on a map image. Format: <lat><long>;;<pin label> OPTIONAL",
+									"disabled": true
+								},
+								{
+									"key": "mapSize",
+									"value": "1080,780",
+									"description": "Map image size. Format: <width>,<height> OPTIONAL"
+								},
+								{
+									"key": "mapLayer",
+									"value": "Basemap,Buildings",
+									"description": "A display layer that renders on top of the imagery set. Possible values: Basemap,Buildings, OrdnanceSurvey, TrafficFlow. OPTIONAL"
+								},
+								{
+									"key": "metadata",
+									"value": "1",
+									"description": "The level of zoom to display. An integer between 0 and 20. OPTIONAL",
+									"disabled": true
+								},
+								{
+									"key": "declutter",
+									"value": "1",
+									"description": "Specifies whether to change the display of overlapping pushpins so that they display separately on a map. OPTIONAL\n"
+								},
+								{
+									"key": "waypoints",
+									"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B|14.427127419990574, 121.02418698375386;;C",
+									"description": "Specifies two or more locations that define the route and that are in sequential order. You can have a maximum of 25 waypoints. REQUIRED \nExamples:\n- waypoint.1=47.610,-122.107 [Point]\n- wp.1=Seattle,WA [landmark]\n- wp.1=Seattle,WA;66;SEA [icon and label]\n- waypoint.1=1%20Microsoft%20Way%20Redmond,%20WA [address]"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/imagery - Get Route Map (SUCCESS with metadata)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "image/jpeg",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{API_BASE_URL}}/imagery?key=route_map&pp=14.435198230128893, 121.01059062256266&mapSize=500,500&mapLayer=Basemap,Buildings&metadata=1&declutter=1&waypoints=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+									"host": [
+										"{{API_BASE_URL}}"
+									],
+									"path": [
+										"imagery"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "route_map",
+											"description": "Key mode for\nAPI request REQUIRED"
+										},
+										{
+											"key": "pp",
+											"value": "14.435198230128893, 121.01059062256266",
+											"description": "Push Pins - Create push pin to pin point locations on a map image. Format: <lat><long>;;<pin label> OPTIONAL"
+										},
+										{
+											"key": "mapSize",
+											"value": "500,500",
+											"description": "Map image size. Format: <width>,<height> OPTIONAL"
+										},
+										{
+											"key": "mapLayer",
+											"value": "Basemap,Buildings",
+											"description": "A display layer that renders on top of the imagery set. Possible values: Basemap,Buildings, OrdnanceSurvey, TrafficFlow. OPTIONAL"
+										},
+										{
+											"key": "metadata",
+											"value": "1",
+											"description": "The level of zoom to display. An integer between 0 and 20. OPTIONAL"
+										},
+										{
+											"key": "declutter",
+											"value": "1",
+											"description": "Specifies whether to change the display of overlapping pushpins so that they display separately on a map. OPTIONAL\n"
+										},
+										{
+											"key": "waypoints",
+											"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+											"description": "Specifies two or more locations that define the route and that are in sequential order. You can have a maximum of 25 waypoints. REQUIRED \nExamples:\n- waypoint.1=47.610,-122.107 [Point]\n- wp.1=Seattle,WA [landmark]\n- wp.1=Seattle,WA;66;SEA [icon and label]\n- waypoint.1=1%20Microsoft%20Way%20Redmond,%20WA [address]"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:05:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1717"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "166edb54-08be-46ba-89e7-5b80c8ec8d6d"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Map Generated Successfulyl\",\n    \"data\": {\n        \"map_image_url\": null,\n        \"metadata\": {\n            \"estimatedTotal\": 1,\n            \"resources\": [\n                {\n                    \"__type\": \"StaticMapMetadata:http://schemas.microsoft.com/search/local/ws/rest/v1\",\n                    \"bbox\": [\n                        14.4205907220071,\n                        121.006035804749,\n                        14.4413298139108,\n                        121.027450561523\n                    ],\n                    \"imageHeight\": \"500\",\n                    \"imageWidth\": \"500\",\n                    \"mapCenter\": {\n                        \"coordinates\": [\n                            \"14.4309397287736\",\n                            \"121.016764640808\"\n                        ]\n                    },\n                    \"pushpins\": [\n                        {\n                            \"anchor\": {\n                                \"x\": \"108\",\n                                \"y\": \"148\"\n                            },\n                            \"bottomRightOffset\": {\n                                \"x\": \"7\",\n                                \"y\": \"7\"\n                            },\n                            \"point\": {\n                                \"coordinates\": [\n                                    \"14.435166\",\n                                    \"121.010671\"\n                                ]\n                            },\n                            \"topLeftOffset\": {\n                                \"x\": \"37\",\n                                \"y\": \"41\"\n                            }\n                        },\n                        {\n                            \"anchor\": {\n                                \"x\": \"423\",\n                                \"y\": \"340\"\n                            },\n                            \"bottomRightOffset\": {\n                                \"x\": \"7\",\n                                \"y\": \"7\"\n                            },\n                            \"point\": {\n                                \"coordinates\": [\n                                    \"14.427193\",\n                                    \"121.024191\"\n                                ]\n                            },\n                            \"topLeftOffset\": {\n                                \"x\": \"37\",\n                                \"y\": \"41\"\n                            }\n                        }\n                    ],\n                    \"zoom\": \"15\"\n                }\n            ]\n        }\n    }\n}"
+						},
+						{
+							"name": "/imagery - Get Route Map (SUCCESS - image only)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "image/jpeg",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{API_BASE_URL}}/imagery?key=route_map&pp=14.435198230128893, 121.01059062256266&mapSize=500,500&mapLayer=Basemap,Buildings&declutter=1&waypoints=14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+									"host": [
+										"{{API_BASE_URL}}"
+									],
+									"path": [
+										"imagery"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "route_map",
+											"description": "Key mode for\nAPI request REQUIRED"
+										},
+										{
+											"key": "pp",
+											"value": "14.435198230128893, 121.01059062256266",
+											"description": "Push Pins - Create push pin to pin point locations on a map image. Format: <lat><long>;;<pin label> OPTIONAL"
+										},
+										{
+											"key": "mapSize",
+											"value": "500,500",
+											"description": "Map image size. Format: <width>,<height> OPTIONAL"
+										},
+										{
+											"key": "mapLayer",
+											"value": "Basemap,Buildings",
+											"description": "A display layer that renders on top of the imagery set. Possible values: Basemap,Buildings, OrdnanceSurvey, TrafficFlow. OPTIONAL"
+										},
+										{
+											"key": "metadata",
+											"value": "1",
+											"description": "The level of zoom to display. An integer between 0 and 20. OPTIONAL",
+											"disabled": true
+										},
+										{
+											"key": "declutter",
+											"value": "1",
+											"description": "Specifies whether to change the display of overlapping pushpins so that they display separately on a map. OPTIONAL\n"
+										},
+										{
+											"key": "waypoints",
+											"value": "14.435198230128893, 121.01059062256266;;A|14.427127419990574, 121.02418698375386;;B",
+											"description": "Specifies two or more locations that define the route and that are in sequential order. You can have a maximum of 25 waypoints. REQUIRED \nExamples:\n- waypoint.1=47.610,-122.107 [Point]\n- wp.1=Seattle,WA [landmark]\n- wp.1=Seattle,WA;66;SEA [icon and label]\n- waypoint.1=1%20Microsoft%20Way%20Redmond,%20WA [address]"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 27 Sep 2022 03:06:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "430"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Host",
+									"value": "techinnovationresearch-eval-test.apigee.net"
+								},
+								{
+									"key": "X-Forwarded-For",
+									"value": "165.225.235.73"
+								},
+								{
+									"key": "X-Forwarded-Port",
+									"value": "443"
+								},
+								{
+									"key": "X-Forwarded-Proto",
+									"value": "https"
+								},
+								{
+									"key": "User-Agent",
+									"value": "PostmanRuntime/7.29.2"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Postman-Token",
+									"value": "ce45f5af-a94a-46c5-a88a-318366896b22"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, x-requested-with, accept, content-type, authorization, x-custom-header"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3628800"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"title\": \"OK\",\n    \"details\": \"Map Generated Successfulyl\",\n    \"data\": {\n        \"map_image_url\": \"https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/Routes?key=AtHE9bgbozoYqBc4UaubjFAw9L16qnnD4-B4UgDGoGu3K2HXBUq_YffNmxAXuaQ9&wp.0=14.435198230128893%2C%20121.01059062256266%3B%3BA&wp.1=14.427127419990574%2C%20121.02418698375386%3B%3BB&mapSize=500,500&mapLayer=Basemap,Buildings&dcl=1\",\n        \"metadata\": null\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "StartFragment\n\nUse the Imagery API to get static maps and Bing™ Maps imagery information.\n\nEndFragment\n\n**Reference URL:** [https://learn.microsoft.com/en-us/bingmaps/rest-services/imagery/](https://learn.microsoft.com/en-us/bingmaps/rest-services/imagery/)"
+		}
+	],
+	"variable": [
+		{
+			"key": "API_BASE_URL",
+			"value": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api"
+		}
+	]
+}

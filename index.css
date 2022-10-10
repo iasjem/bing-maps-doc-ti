@@ -1,0 +1,95 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+h4 {
+    margin: 0 0 14px 0;
+}
+
+main {
+    min-height: calc(100vh - 70px);
+    margin: 0 16px;
+}
+
+header {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./img/doc-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #888;
+    color: #ffffff;
+}
+
+footer {
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+}
+
+section {
+    margin: 2rem 0 !important;
+}
+
+aside {
+    position: fixed;
+    width: fit-content;
+    right: 16px;
+    top: 16px;
+}
+
+ol.doc-chapters li figure {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+}
+
+ol.doc-chapters li figure img {
+    width: 100%;
+    pointer-events: none;
+}
+
+ol.doc-chapters li figure figcaption {
+    font-size: 12px;
+    font-style: italic;
+}
+
+@media screen and (max-width: 767px) {
+    ol.doc-chapters li figure {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p, td, li, a {
+        font-size: 14px;
+    }
+    ol.doc-chapters {
+        padding: 0 14px;
+    }
+    ol.doc-chapters li figure {
+        width: 100%;
+    }
+    ol.doc-chapters li figure {
+        margin: 0 auto 2rem auto;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
