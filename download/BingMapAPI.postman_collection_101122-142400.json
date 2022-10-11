@@ -55,15 +55,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api/traffic?mapArea=14.4205907220071,121.006035804749,14.4413298139108,121.027450561523&locationCodes=true&severity=1,2,3,4&type=1,2,3,4,5,6,7,8,9,10,11",
-									"protocol": "https",
+									"raw": "{{API_BASE_URL}}/traffic?mapArea=14.4205907220071,121.006035804749,14.4413298139108,121.027450561523&locationCodes=true&severity=1,2,3,4&type=1,2,3,4,5,6,7,8,9,10,11",
 									"host": [
-										"techinnovationresearch-eval-test",
-										"apigee",
-										"net"
+										"{{API_BASE_URL}}"
 									],
 									"path": [
-										"bing-maps-api",
 										"traffic"
 									],
 									"query": [
@@ -1961,10 +1957,30 @@
 			"description": "StartFragment\n\nUse the Imagery API to get static maps and Bing™ Maps imagery information.\n\nEndFragment\n\n**Reference URL:** [https://learn.microsoft.com/en-us/bingmaps/rest-services/imagery/](https://learn.microsoft.com/en-us/bingmaps/rest-services/imagery/)"
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "API_BASE_URL",
-			"value": "https://techinnovationresearch-eval-test.apigee.net/bing-maps-api"
+			"value": "\thttps://cebupacificair-dev.apigee.net/ceb-poc-bingmaps-api"
 		}
 	]
 }
